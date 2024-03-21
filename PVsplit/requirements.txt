@@ -1,0 +1,5 @@
+scikit-image
+astropy
+matplotlib
+scipy
+numpy
