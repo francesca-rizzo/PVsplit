@@ -3,7 +3,7 @@ import perform_pvsplit
 import outputs
 
 def main():
-    input_folder = "/Users/francescarizzo/Documents/projects/refactored_pvsplit-main-2_final/example_directory/output" # Path to the folder containing the “pvs” and “plotscripts” directories
+    input_folder = "../example_directory/output" # Path to the folder containing the “pvs” and “plotscripts” directories
     gname = "serra_00_snap_23_h1842_i_1.38_ca_2.9_4_2_3.alma_0.05arcsec_0" # Name of the output files in the pvs folder
     outfolder = read_pvs_plot.find_outfolder(input_folder)
     paths = []
