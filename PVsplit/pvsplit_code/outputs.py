@@ -35,8 +35,8 @@ def write_to_text(p_major, p_minor1, p_minor2, p_v, p_r, pvsplit_output_director
 
 def plane_eq(p_major, p_v, p_r):
     # Generic plane equation with substitued values to find z intercept which is P_r
-    a, b, c, d = -0.63, -0.27, 2.78, -2.72
-    return (d - a*p_major - b*p_v) / c
+    a, b, c, d = 0.63, 0.27, 2.78, 2.72
+    return (d + a*p_major + b*p_v) / c
 
 # Draw 3D plots to show the results
 def draw_3d_plots(p_major, p_v, p_r, pvsplit_output_directory):
@@ -61,7 +61,7 @@ def draw_3d_plots(p_major, p_v, p_r, pvsplit_output_directory):
     plane_value_at_point = a*p_major + b*p_v + c*p_r + d
 
     label = None
-    if plane_value_at_point < 0:
+    if plane_value_at_point > 0:
         label = 'Disc'
     else:
         label = 'Not a disc'
